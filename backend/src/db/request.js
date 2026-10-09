@@ -1,5 +1,4 @@
-import sql from 'mssql';
-import { poolPromise } from './pool.js';
+import { poolPromise, sql } from './pool.js';
 
 export function sqlType(typeName, options = {}) {
   const normalized = String(typeName).toLowerCase();
@@ -43,3 +42,4 @@ export async function queryDatabase(statement, params = {}) {
 
   return request.query(statement);
 }
+

@@ -1,6 +1,5 @@
 import crypto from 'crypto';
-import { poolPromise } from '../db/pool.js';
-import sql from 'mssql';
+import { poolPromise, sql } from '../db/pool.js';
 import { ApiError } from '../utils/ApiError.js';
 import { mapDatabaseError } from '../utils/dbErrors.js';
 import { sendSmtpMail } from './mailerService.js';
@@ -313,3 +312,4 @@ export const checkoutService = {
     }
   },
 };
+

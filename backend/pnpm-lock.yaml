@@ -32,6 +32,9 @@ importers:
       morgan:
         specifier: ^1.10.0
         version: 1.11.0
+      msnodesqlv8:
+        specifier: ^5.5.0
+        version: 5.5.0
       mssql:
         specifier: ^11.0.1
         version: 11.0.1
@@ -793,6 +796,11 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
+  msnodesqlv8@5.5.0:
+    resolution: {integrity: sha512-dnvrMMdzlOerqeUY01FnN4gYn4yNYAy20+iGoASo5fOLGzIpekj9L6hzP544po3H+qWIt06j6VzJGu8na7l+RQ==}
+    engines: {node: '>=18'}
+    os: [win32, linux, darwin]
+
   mssql@11.0.1:
     resolution: {integrity: sha512-KlGNsugoT90enKlR8/G36H0kTxPthDhmtNUCwEHvgRza5Cjpjoj+P2X6eMpFUDN7pFrJZsKadL4x990G8RBE1w==}
     engines: {node: '>=18'}
@@ -809,6 +817,14 @@ packages:
   negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
+
+  node-addon-api@8.9.2:
+    resolution: {integrity: sha512-VijLXbi3UACN69I0JVXJsX4tjACjNoQDgv2gTF6sx2wWEi8tkSg2eX8p5gSIFi8z2+DL3oHmY6OyKce38SDolg==}
+    engines: {node: ^18 || ^20 || >= 21}
+
+  node-gyp-build@4.8.4:
+    resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
+    hasBin: true
 
   nodemon@3.1.14:
     resolution: {integrity: sha512-jakjZi93UtB3jHMWsXL68FXSAosbLfY0In5gtKq3niLSkrWznrVBzXFNOEMJUfc9+Ke7SHWoAZsiMkNP3vq6Jw==}
@@ -1856,6 +1872,11 @@ snapshots:
 
   ms@2.1.3: {}
 
+  msnodesqlv8@5.5.0:
+    dependencies:
+      node-addon-api: 8.9.2
+      node-gyp-build: 4.8.4
+
   mssql@11.0.1:
     dependencies:
       '@tediousjs/connection-string': 0.5.0
@@ -1880,6 +1901,10 @@ snapshots:
   native-duplexpair@1.0.0: {}
 
   negotiator@0.6.3: {}
+
+  node-addon-api@8.9.2: {}
+
+  node-gyp-build@4.8.4: {}
 
   nodemon@3.1.14:
     dependencies:
